@@ -49,7 +49,7 @@ import { PAGView } from 'libpag-lite-miniprogram';
 Page({
   onReady() {
     wx.createSelectorQuery().select('#pag').node().exec(async(res) => {
-      const canvas = res.node
+      const canvas = res[0].node
       wx.request({
       	url,
       	method: 'GET',
